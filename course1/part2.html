@@ -13,6 +13,13 @@
 			width: 720px;
 		}
 		
+		fieldset label {
+			width: 180px;
+			display: inline-block;
+			text-align: right;
+			text-align: top;
+		}
+		
 		label {
 			width: 180px;
 			display: inline-block;
@@ -20,16 +27,8 @@
 			right: 0px;
 		}
 		
-		.checkbox label {
-			width: auto;
-		}
-		
-		.radio label {
-			width: auto;
-		}
-		
 		.range label {
-			text-align: center;
+			text-align: right;
 		}
 		
 		textarea {
@@ -40,25 +39,27 @@
 		#short,
 		#poor {
 			background-color: red;
+			text-align: center
 		}
 		
 		#tall,
 		#rich {
 			background-color: rebeccapurple;
+			text-align: center;
 		}
 	</style>
 </head>
 
 <body>
-	<form action=" http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get">
+	<form action=" http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get" enctype="multipart/form-data">
 		<h1>Please Enter Your Details For Our Dating Website!!!</h1>
 
 		<!-- Your Face FieldSet -->
 		<fieldset>
 			<legend>Your Face</legend>
-			<label for="image"> Your Image:
-				<input type="file" id="image" name="image" required>
-			</label>
+			<label for="image"> Your Image:</label>
+			<input type="file" id="image" name="image" required>
+
 			<br>
 			<label>Image Preview:<img id="preview"></label>
 			<br>
@@ -73,8 +74,8 @@
 
 			<div class="radio">
 				<label for="sex">Gender:</label>
-				<input type="radio" name="sex" value="Male" checked required> Male
-				<input type="radio" name="sex" value="Female" required> Female</div>
+				<input type="radio" name="sex" value="Male" id="sex" checked required> Male
+				<input type="radio" name="sex" value="Female" id="sex"  required> Female</div>
 
 
 			<label for="age">Age:</label>
@@ -88,6 +89,7 @@
 			<label for="color">Favorite Color:</label>
 			<input type="color" name="color" id="color">
 			<br>
+			
 
 			<label for="country">Which Country:</label>
 			<select name="country">

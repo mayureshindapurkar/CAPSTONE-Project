@@ -5,6 +5,7 @@
 	<meta name="author" content="Shashank K">
 	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 	<style>
+		
 		fieldset {
 			background: lightyellow;
 			border: 10px solid yellow;
@@ -13,28 +14,22 @@
 			width: 720px;
 		}
 		
+		fieldset label {
+			width: 180px;
+			display: inline-block;
+			text-align: right;
+			text-align: top;
+		}
+		
 		label {
 			width: 180px;
 			display: inline-block;
 			top: 0px;
 			right: 0px;
-			
-		}
-		
-		label:hover {font-size: 40px;}
-		
-		
-		
-		.checkbox label {
-			width: auto;
-		}
-		
-		.radio label {
-			width: auto;
 		}
 		
 		.range label {
-			text-align: center;
+			text-align: right;
 		}
 		
 		textarea {
@@ -45,12 +40,17 @@
 		#short,
 		#poor {
 			background-color: red;
+			text-align: center
 		}
 		
 		#tall,
 		#rich {
 			background-color: rebeccapurple;
+			text-align: center;
 		}
+		
+		label:hover {font-size: 40px;}
+		
 	</style>
 </head>
 
@@ -61,7 +61,7 @@
 		<!-- Your Face FieldSet -->
 		<fieldset>
 			<legend>Your Face</legend>
-			<label for="image"> Your Image:
+			<label for="image"> Your Image:</label>
 				<input type="file" id="image" name="image" required>
 			</label>
 			<br>
