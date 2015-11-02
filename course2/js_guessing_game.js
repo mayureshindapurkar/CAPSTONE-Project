@@ -1,9 +1,12 @@
 
 var attempts = 0;
 
+var randomNumber = Math.random()*100;
+var secretNumber = Math.floor(randomNumber)+1;
+
 function guessingGame() {
 
-				var secretNumber = 44;
+				
 				var guess = prompt("Enter a number between 1 to 100");
 
 				if (parseInt(guess) == secretNumber) {
