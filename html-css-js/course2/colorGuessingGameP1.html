@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="Author" content="Shashank K">
+</head>
+
+<body>
+	<title>Color Guessing Game</title>
+	<script>
+		alert("Welcome To Color Guessing Game\n\nPart 1");
+			var finished=false;
+			var colors=['blue','cyan','gold','gray','magenta','orange','red','white','yellow'];
+			var guesses=0;
+			var guess_input;
+			var guess_input_text;
+			var target;
+			var target_index;
+			do_game();
+			
+			function do_game(){
+			 target_index=Math.random()*colors.length+1;
+			 target=colors[parseInt(target_index)].toLowerCase();
+			
+			while(!finished){
+			console.log("The Color is:"+target+"\nThe index is:"+parseInt(target_index));
+			
+			 guess_input_text=prompt("I am thinking of one of these colors:\n\n"+colors.join(", ")+"\n\n Hint:Color is "+target+"\n\nWhat color am I thinking of?");
+			 guess_input=guess_input_text.toLowerCase();
+			 guesses++;
+			if (guess_input === target) {
+
+                myBody=document.getElementsByTagName("body")[0];
+                myBody.style.background = target;
+
+                alert("Congratulations! You have guessed the color! \n\n" +
+                      "It took you " + guesses + " guesses to finish the game. \n\n" +
+                      "You can see the color in the background.");
+                return true;            }	
+			
+			}}
+	
+	</script>
+
+</body>
+
+
+</html>
