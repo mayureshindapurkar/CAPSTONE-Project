@@ -1,1 +1,0 @@
-This is Course 1 of Week 1
