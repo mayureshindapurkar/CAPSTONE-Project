@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <style media="screen">
+      img {
+        position: absolute;
+      }
+      div {
+        position: absolute;
+        width: 500px;
+        height: 500px
+      }
+
+      #rightSide {
+        left: 500px;
+        border-left: 1px solid black;
+     }
+    </style>
+  </head>
+<body id="body" onload="generateFaces()">
+    <h2>Matching Game</h2>
+    <p>
+      Click on the extra smiling face on the left.
+    </p>
+    <div id="leftSide">
+    <img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 368px; left: 370px;"><img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 320px; left: 290px;"><img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 345px; left: 32px;"><img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 163px; left: 212px;"><img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 393px; left: 256px;"></div>
+    <div id="rightSide">
+    <div id="leftSide">
+    <img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 368px; left: 370px;"><img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 320px; left: 290px;"><img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 345px; left: 32px;"><img src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png" style="top: 163px; left: 212px;"></div></div>
+    <script type="text/javascript">
+    // number of faces to be generated in the left side to start with
+    var numberOfFaces = 5;
+    // get left side div
+    var theLeftSide = document.getElementById("leftSide");
+    var theRightSide = document.getElementById("rightSide");
+    var theBody = document.getElementsByTagName("body")[0];
+
+
+    function generateFaces() {
+      for (var i = 0; i < numberOfFaces; i++) {
+        var smile = document.createElement("IMG");
+        smile.src="http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+        smile.style.top = String(Math.floor(Math.random() * 400)) + "px";
+        smile.style.left = String(Math.floor(Math.random() * 400)) + "px";
+        theLeftSide.appendChild(smile);
+      }
+      leftSideImages = theLeftSide.cloneNode(true);
+      leftSideImages.removeChild(leftSideImages.lastChild);
+      theRightSide.appendChild(leftSideImages);
+
+      // attach onclick to the extra face on left to generate extra 5 faces
+      // success code
+      theLeftSide.lastChild.onclick = function nextLevel(event) {
+        event.stopPropagation();
+        while (leftSide.firstChild) {
+          leftSide.removeChild(leftSide.firstChild);
+        }
+        numberOfFaces += 5;
+        generateFaces();
+      };
+
+      // failure code if player hits the body or wrong face game over
+      theBody.onclick = function gameOver() {
+        alert("Game Over!");
+        theBody.onclick = null;
+        theLeftSide.lastChild.onclick = null;
+        };
+    }
+    </script>
+  
+
+</body></html>
