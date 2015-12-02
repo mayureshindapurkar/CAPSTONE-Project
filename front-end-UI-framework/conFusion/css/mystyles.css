@@ -73,3 +73,6 @@ body {
     border-bottom: 1px solid #ddd;
     paddingadding: 10px;
 }
+.affix {
+    top:100px;
+}
