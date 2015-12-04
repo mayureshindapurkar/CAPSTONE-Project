@@ -1,0 +1,22 @@
+{
+  "name": "capstone",
+  "homepage": "https://github.com/shashankKeshava/CAPSTONE-Project",
+  "authors": [
+    "Shashank Keshava <shashank.keshava@bookmyshow.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
+}
