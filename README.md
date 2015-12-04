@@ -1,6 +1,12 @@
 # CAPSTONE-Project
 Full Stack Web Development Specialization
 
+//Run Node
+node solve.js
+
+//Install Bower 
+npm install -g bower
+
 //Git new project Repository
 git init fileName
 
@@ -9,6 +15,10 @@ git add .
 
 //Git Commit (SnapShot) to local repository
 git commit -m “Message”
+
+
+//Git Push to Remote
+git push origin master
 
 //Adds all to local repository and commits all
 git commit -a -m "Git for local+commit"
