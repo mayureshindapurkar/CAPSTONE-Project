@@ -1,0 +1,22 @@
+{
+  "name": "node-examples",
+  "version": "1.0.0",
+  "description": "node examples",
+  "main": "solve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashankKeshava/CAPSTONE-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shashankKeshava/CAPSTONE-Project/issues"
+  },
+  "homepage": "https://github.com/shashankKeshava/CAPSTONE-Project#readme",
+  "dependencies": {
+    "prompt": "^0.2.14"
+  }
+}

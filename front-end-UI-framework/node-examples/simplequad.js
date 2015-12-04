@@ -1,6 +1,7 @@
 var a = 1,
     b = 4,
     c = 1;
+
 var discriminant = function(a, b, c) {
     return (b * b - 4 * a * c);
 }

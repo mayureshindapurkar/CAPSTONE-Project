@@ -1,4 +1,4 @@
-var disc = require('./modules');
+var disc = require('./discriminant');
 
 module.exports = function(a, b, c, next) {
     if (a == 0) {
