@@ -61,7 +61,8 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a data-toggle="modal" data-target="#loginModal">
+                        <!-- <a data-toggle="modal" data-target="#loginModal"> -->
+                        <a id="login1">
                             <span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
@@ -186,7 +187,8 @@
                 </div>
                 <div class="col-xs-12 col-sm-2 btn-group">
                     <p style="padding:40px;"></p>
-                    <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                    <!-- <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal">Reserve Table</a> -->
+                    <a type="button" class="btn btn-warning btn-block" id="reserveTable1">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -429,15 +431,23 @@
             </script>
             <script>
             $(document).ready(function() {
-                $("#mycarousel").carousel({
-                    interval: 2000
+                $("#login1").click(function() {
+                    $('#loginModal').modal('show');
                 });
-                $("#carousel-pause").click(function() {
-                    $("#mycarousel").carousel('pause');
-                });
-                $("#carousel-play").click(function() {
-                    $("#mycarousel").carousel('cycle');
-                });
+                $("#reserveTable1").click(function() {
+                    $('#reserveModal').modal('show');
+                })
+            });
+            </script>
+            <script>
+            $("#mycarousel").carousel({
+                interval: 2000
+            });
+            $("#carousel-pause").click(function() {
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function() {
+                $("#mycarousel").carousel('cycle');
             });
             </script>
 </body>
