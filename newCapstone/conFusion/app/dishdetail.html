@@ -26,6 +26,9 @@
     <div class="container">
         <div class="row row-content" ng-controller="dishDetailController as dishCtrl">
             <div class="col-xs-12">
+                <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right" type="button">
+                    {{showDetails ? 'Hide Details':'Show Details'}}
+                </button>
                 <ul class="media-list">
                     <li class="media" ng-repeat="dish in dishCtrl.dish">
                         <div class="media-left media-middle">
